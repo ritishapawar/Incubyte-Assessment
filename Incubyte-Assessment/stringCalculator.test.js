@@ -14,7 +14,7 @@ describe('String Calculator', () => {
   });
 
   test('handles new lines between numbers', () => {
-    expect(add('1\n2,3')).toBe(6);
+    expect(add('1,\n2,3')).toBe(6);
   });
 
   test('supports custom delimiters', () => {

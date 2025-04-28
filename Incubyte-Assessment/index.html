@@ -1,0 +1,24 @@
+<html>
+<head>
+  <title>String Calculator</title>
+</head>
+<body>
+  <h1>String Calculator</h1>
+  <input id="numbers" type="text" placeholder="Enter numbers">
+  <button id="calculate">Calculate</button>
+  <p id="result"></p>
+
+  <script src="stringCalculator.js"></script>
+  <script>
+    document.getElementById('calculate').onclick = function () {
+      const numbers = document.getElementById('numbers').value;
+      try {
+        const result = add(numbers);
+        document.getElementById('result').textContent = `Result: ${result}`;
+      } catch (e) {
+        document.getElementById('result').textContent = e.message;
+      }
+    }
+  </script>
+</body>
+</html>
